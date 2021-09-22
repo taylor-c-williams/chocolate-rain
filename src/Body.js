@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ImageSection from './ImageSection.js';
 import Recipe from './Recipe.js';
-import IngredientsList from './IngredientsList.js';
+import IngredientItem from './IngredientItem.js';
 import Ingredients from './data.js';
 
 export default class Body extends Component {
@@ -9,10 +9,10 @@ export default class Body extends Component {
     return (
       <div>
         <main>
-          { <ImageSection /> }
-          { <Recipe /> }    
+           <ImageSection /> 
+          <Recipe />  
           { Ingredients.map(Ingredient =>
-            <IngredientsList
+            <IngredientItem
               name = {Ingredient.name}
               measure = {Ingredient.measure}
             />) }
