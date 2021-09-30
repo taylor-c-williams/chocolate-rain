@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
 import ImageSection from './ImageSection.js';
 import Recipe from './Recipe.js';
-import IngredientItem from './IngredientItem.js';
-import Ingredients from './data.js';
+import IngredientsList from './IngredientsList.js';
 
 export default class Body extends Component {
   render() {
     return (
       <div>
         <main>
-           <ImageSection /> 
+          <ImageSection /> 
           <Recipe />  
-          { Ingredients.map(Ingredient =>
-            <IngredientItem
-              name = {Ingredient.name}
-              measure = {Ingredient.measure}
-            />) }
+          <IngredientsList/>
         </main>
       </div>
     );
